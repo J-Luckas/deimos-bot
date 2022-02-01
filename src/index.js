@@ -19,13 +19,13 @@ client.on('messageCreate', ( message ) => {
         setTimeout(() => {
             voice.channel.members.forEach(member => {
                 if(member.user.bot && member.user.username.includes('Chip') || member.user.username.includes('Jockie') || member.user.username.includes('Music')){
-                    message.reply(`<@${message.author.username}> peça música apenas no canal #pedir-musica!`)
+                    message.reply(`@${message.author.username} peça música apenas no canal #pedir-musica!`)
                         .then(msg => {
                             setTimeout(() => msg.delete(), 10000)
                         });
 
                     member.voice.disconnect();
-                    message.reply(`<@${member.user.username}> se retirando...`)
+                    message.reply(`@${member.user.username} se retirando...`)
                         .then(msg => {
                             setTimeout(() =>{ 
                                 msg.delete();
