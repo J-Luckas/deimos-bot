@@ -4,5 +4,5 @@
  
  <ul>
   <li>yarn install / npm install</li>
-  <li> yarn dev </li>
+  <li> yarn dev / npm run dev</li>
 </ul>
