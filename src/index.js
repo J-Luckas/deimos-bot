@@ -15,7 +15,7 @@ client.on('messageCreate', ( message ) => {
     
     if(message.author.bot) return;
 
-    if ( message.content.includes("!p") || message.content.includes("m!p") || voice.channel && message.channelId !== '888059487708131338' ){ 
+    if ( ( message.content.includes("!p") || message.content.includes("m!p") ) && voice.channel && message.channelId !== '888059487708131338' ){ 
         setTimeout(() => {
             voice.channel.members.forEach(member => {
                 if(member.user.bot && member.user.username.includes('Chip') || member.user.username.includes('Jockie') || member.user.username.includes('Music')){
