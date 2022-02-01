@@ -1,15 +1,12 @@
-import { Client } from 'discord.js';
-import { config } from 'dotenv';
-
-config();
+const { Client } =  require('discord.js');
+require('dotenv').config();
 
 const client = new Client({
     intents: 641,
 });
 
 // When the client is ready, run this code (only once)
-client.once('ready', () => {
-    
+client.once('ready', () => {    
 	console.log(`I'm ready as ${client.user.tag}!`);
 });
 
